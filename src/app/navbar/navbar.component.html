@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Survex</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li *ngIf="!loggedIn()" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" routerLink="/admin-login">Admin</a></li>
+            <li><a class="dropdown-item" href="#">User</a></li>
+
+          </ul>
+        </li>
+
+        <li *ngIf="loggedIn()" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="loggedIn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Welcome {{user}}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" routerLink="/admin-dashboard">Dashboard</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/manage-users">Manage Users</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/manage-surveys">Manage Surveys</a></li>
+            <li><a class="dropdown-item" href="#" (click)="logout()">Logout</a></li>
+
+
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

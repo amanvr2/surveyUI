@@ -1,0 +1,13 @@
+.manageUser{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.manageUser-list{
+  width: 70%;
+}
+
+.manageUser-list>button{
+  margin-bottom: 30px;
+}

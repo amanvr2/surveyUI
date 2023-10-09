@@ -1,0 +1,35 @@
+.question-main{
+  display: flex;
+  justify-content: center;
+}
+
+.question-list{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 80%;
+
+}
+
+.question-card{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+.question-item{
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 220px;
+  width: 80%;
+  box-shadow: 0 0 4px 1px lightgray;
+  border-radius: 0.3rem;
+  padding: 25px;
+  margin: 15px;
+
+}

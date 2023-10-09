@@ -1,0 +1,71 @@
+
+
+
+<div class="manageUser">
+  <div class="manageUser-list">
+    <button class = "btn btn-dark" routerLink="/add-user">Add User</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Mobile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <th scope="row">{{user.id}}</th>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.mobile}}</td>
+          <td><button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button></td>
+          <td><button type="button" (click)="onEdit(user)"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Edit
+          </button></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="updateForm">
+          <div class="form-group col-12">
+            <label>Name</label>
+            <input class="form-control" required formControlName="name">
+          </div>
+
+          <div class="form-group col-12">
+            <label>Email</label>
+            <input class="form-control" required formControlName="email">
+          </div>
+
+          <div class="form-group col-12">
+            <label>Mobile</label>
+            <input class="form-control" required formControlName="mobile">
+          </div>
+
+          <div class="form-group col-12">
+            <label>Password</label>
+            <input class="form-control" required formControlName="password">
+          </div>
+          <br>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button"  (click)="updateUser()" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

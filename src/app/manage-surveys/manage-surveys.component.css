@@ -1,0 +1,51 @@
+.survey-main{
+  display: flex;
+  justify-content: center;
+}
+
+.survey-list{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 80%;
+
+}
+
+.survey-card{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+
+}
+
+.survey-item{
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  width: 20%;
+  box-shadow: 0 0 4px 1px lightgray;
+  border-radius: 0.3rem;
+
+
+}
+
+.surveyBtns{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.surveyBtn>a{
+  color: #183153;
+  font-size: 20px;
+}
+
+.survey-add>button{
+  margin: 40px;
+}
